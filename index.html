@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Goodness Ndukauba | Web Designer for Websites That Convert</title>
 <meta name="description" content="Goodness Ndukauba designs landing pages and business websites built to turn visitors into customers.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2064%2064%22%3E%3Cpath%20d=%22M32%202h22a8%208%200%200%201%208%208v44a8%208%200%200%201-8%208H10a8%208%200%200%201-8-8V32C2%2015.4%2015.4%202%2032%202z%22%20fill=%22%23C8FF1F%22/%3E%3Ctext%20x=%2232%22%20y=%2246%22%20text-anchor=%22middle%22%20font-family=%22Arial%20Black%2CArchivo%20Black%2CArial%2Csans-serif%22%20font-weight=%22900%22%20font-size=%2242%22%20fill=%22%230A2BFF%22%3EG%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{--blue:#0A2BFF;--deep:#06187F;--lime:#C8FF1F;--ink:#0B1033;--paper:#fff;--soft:#F0F2FA;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -50,6 +51,12 @@ nav ul a:hover{background:#fff;color:var(--blue)}
 .arrow path{fill:none;stroke:var(--lime);stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:420;stroke-dashoffset:420;animation:draw 1.6s .9s ease forwards}
 @keyframes draw{to{stroke-dashoffset:0}}
 @media(max-width:900px){.glass{position:relative;right:auto;top:auto;margin:34px 0 0 auto;width:170px}.badge{width:110px;height:110px;bottom:14px}.arrow{display:none}.hero{padding-bottom:90px}}
+.price{display:inline-flex;align-items:center;gap:10px;margin:26px 0 0;padding:10px 20px;border-radius:99px;background:var(--lime);color:var(--ink);font-weight:700;font-size:18px;position:relative;z-index:3;transform:rotate(-2deg)}
+.price b{font-family:"Archivo Black",sans-serif;font-weight:400;font-size:22px}
+.btn.wa{background:#25D366;color:#06311A}
+.contact .price{margin:0 0 26px}
+.contact .cta-row{justify-content:center}
+@media(max-width:480px){nav .btn{padding:10px 14px;font-size:14px}.price{font-size:16px}}
 /* marquee */
 .marquee{background:var(--lime);color:var(--ink);overflow:hidden;transform:rotate(-1.6deg);margin:-34px -10px 0;position:relative;z-index:5;white-space:nowrap}
 .marquee div{display:inline-block;padding:14px 0;font-family:"Archivo Black",sans-serif;font-size:22px;animation:slide 26s linear infinite}
@@ -82,6 +89,17 @@ nav ul a:hover{background:#fff;color:var(--blue)}
 .proj:hover .go{transform:rotate(45deg);background:var(--lime);color:var(--ink)}
 .proj.static{cursor:default}.proj.static:hover{transform:none}
 @media(max-width:760px){.grid{grid-template-columns:1fr}}
+/* process */
+.process{margin-top:100px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;list-style:none;margin:0;padding:0}
+.step{background:var(--soft);border-radius:26px;padding:28px}
+.step .n{display:block;font-family:"Archivo Black",sans-serif;font-size:48px;line-height:1;color:var(--blue);margin-bottom:14px}
+.step h3{font-size:24px;text-transform:uppercase;margin-bottom:10px}
+.step p{margin:0;color:#454a6b}
+.step.final{background:var(--blue);color:#fff}
+.step.final .n{color:var(--lime)}.step.final p{color:#e6e9ff}
+.process .btn{margin-top:28px}
+@media(max-width:860px){.steps{grid-template-columns:1fr}.process{margin-top:80px}}
 /* about */
 .about{display:grid;grid-template-columns:320px 1fr;gap:50px;align-items:center;margin-top:110px}
 .about img{width:100%;border-radius:36px;aspect-ratio:1;object-fit:cover;transform:rotate(-3deg);box-shadow:12px 12px 0 var(--lime)}
@@ -100,8 +118,8 @@ footer{background:var(--deep);padding:22px 0;font-size:14px;text-align:center}
 <header class="wrap">
 <nav>
 <a class="logo" href="#top">Goodness</a>
-<ul><li><a href="#work">Work</a></li><li><a href="#services">Services</a></li><li><a href="#about">About</a></li></ul>
-<a class="btn line" href="https://www.linkedin.com/in/lagoodie" target="_blank" rel="noopener">Connect on LinkedIn</a>
+<ul><li><a href="#work">Work</a></li><li><a href="#process">Process</a></li><li><a href="#services">Services</a></li><li><a href="#about">About</a></li></ul>
+<a class="btn line" href="https://wa.me/2348162940356" target="_blank" rel="noopener">WhatsApp</a>
 </nav>
 </header>
 
@@ -110,7 +128,9 @@ footer{background:var(--deep);padding:22px 0;font-size:14px;text-align:center}
 <span class="hash" aria-hidden="true">#</span>
 <h1 style="padding-left:clamp(40px,8vw,110px)"><span><i>Websites</i></span><span><i>that turn clicks</i></span><span><i>into clients</i></span></h1>
 <p class="sub">I’m Goodness Ndukauba, a web designer who builds landing pages and business websites that look sharp, load fast and make people take action.</p>
-<div class="cta-row">
+<div class="price" role="note">Pricing starts at <b>$15 (₦20k)</b></div>
+<div class="cta-row" style="margin-top:22px">
+<a class="btn wa" href="https://wa.me/2348162940356" target="_blank" rel="noopener">Chat on WhatsApp</a>
 <a class="btn lime" href="https://www.linkedin.com/in/lagoodie" target="_blank" rel="noopener">Start your project</a>
 <a class="btn line" href="#work">See my work</a>
 </div>
@@ -140,7 +160,7 @@ footer{background:var(--deep);padding:22px 0;font-size:14px;text-align:center}
 </section>
 
 <section class="work" id="work">
-<h2>Recent work</h2>
+<h2>Work Sample</h2>
 <p class="lede">Real sites, live now. Open any of them and see how they work.</p>
 <div class="grid">
 <a class="proj" href="https://mutastores.online/" target="_blank" rel="noopener"><div class="shot" style="background:#0A2BFF"><div class="bar"><i></i><i></i><i></i></div><strong>Muta Stores</strong><em></em></div><div class="meta"><div><b>Muta Stores</b><br><span>Landing page</span></div><div class="go">↗</div></div></a>
@@ -149,6 +169,20 @@ footer{background:var(--deep);padding:22px 0;font-size:14px;text-align:center}
 <a class="proj" href="https://memories-of-ezinne-mrs-florence-nwakaku-ugochukwu.ai.studio" target="_blank" rel="noopener"><div class="shot" style="background:#2B2F4A"><div class="bar"><i></i><i></i><i></i></div><strong>Memories of Mrs Florence</strong><em></em></div><div class="meta"><div><b>Memorial for Mrs Florence Nwakaku Ugochukwu</b><br><span>Memorial website</span></div><div class="go">↗</div></div></a>
 <div class="proj static" style="grid-column:1/-1"><div class="shot" style="background:#FF4D2E;height:200px"><div class="bar"><i></i><i></i><i></i></div><strong style="max-width:100%">AdVanta Media</strong><em></em></div><div class="meta"><div><b>AdVanta Media</b><br><span>Performance marketing website for a media buying agency</span></div></div></div>
 </div>
+</section>
+
+<section class="process" id="process">
+<h2>How it works</h2>
+<p class="lede">From your first message to a live website, here is every step.</p>
+<ol class="steps">
+<li class="step"><span class="n">1</span><h3>Message me on WhatsApp</h3><p>Tell me what you sell, who your customers are and what you want visitors to do.</p></li>
+<li class="step"><span class="n">2</span><h3>Get your price</h3><p>I send a clear quote for the page or site you need, with no surprises.</p></li>
+<li class="step"><span class="n">3</span><h3>Pay 70% to start</h3><p>The 70% commitment secures your slot, and I start planning your project.</p></li>
+<li class="step"><span class="n">4</span><h3>Fill in the brief</h3><p>I send you a short brief. Add your business details, offer, colours and images.</p></li>
+<li class="step"><span class="n">5</span><h3>I design and build</h3><p>I turn your brief into a fast, mobile-friendly site built around getting people to act.</p></li>
+<li class="step final"><span class="n">6</span><h3>Delivery and feedback</h3><p>Your website goes live. You review it and tell me how it went.</p></li>
+</ol>
+<a class="btn wa" href="https://wa.me/2348162940356" target="_blank" rel="noopener">Start on WhatsApp</a>
 </section>
 
 <section class="about" id="about">
@@ -167,9 +201,11 @@ footer{background:var(--deep);padding:22px 0;font-size:14px;text-align:center}
 <div class="wrap">
 <h2>Your next site starts here</h2>
 <p>Tell me about your business and what you want visitors to do. I’ll reply with a plan.</p>
-<a class="btn lime" href="https://www.linkedin.com/in/lagoodie" target="_blank" rel="noopener">Let’s talk on LinkedIn</a>
+<div class="price" role="note">Pricing starts at <b>$15 (₦20k)</b></div>
+<div class="cta-row"><a class="btn wa" href="https://wa.me/2348162940356" target="_blank" rel="noopener">Message on WhatsApp</a>
+<a class="btn lime" href="https://www.linkedin.com/in/lagoodie" target="_blank" rel="noopener">Let’s talk on LinkedIn</a></div>
 </div>
 </section>
-<footer>© 2026 Goodness Ndukauba. Web designer.</footer>
+<footer>© 2026 Goodness Ndukauba. Web designer. · <a href="https://wa.me/2348162940356" target="_blank" rel="noopener">WhatsApp 08162940356</a></footer>
 </body>
 </html>
